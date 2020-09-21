@@ -39,6 +39,10 @@ delta3 = zeros(length(K),1);
 for j=1:length(K)
     delta3(j) = cmarket(j,2)- priceCall1(paths2,K(j),0,6/52);
 end
+plot(paths1)
+hold on
+plot(paths2)
+figure()
 delta2
 delta3
 %% 2d
@@ -78,6 +82,10 @@ for j=1:length(K)
     delta22(j,1) = cmarket(j,1)- priceCall1(paths2w1,K(j),0,2/52);
     delta22(j,2) = cmarket(j,1)- priceCall1(paths2w2,K(j),0,2/52);
 end
+plot(paths2w1)
+hold on
+plot(paths2w1)
+hold off
 plot(45:.5:70,delta12(:,1),'r','LineWidth',2,'MarkerSize',12);
 title('Comparison of delta1 vs delta2 vs delta3 for 2 weeks');
 
@@ -123,7 +131,4 @@ hold off
 % No, we do not get the same conclusion since for 2 weeks model(3) more 
 % accurately predicts the call option price and for 18 weeks as well we 
 % have model(3) giving a better estimate for the price since delta is closer to 0.
-% (although for 18 weeks model(1) is not very far). The model(2) and
-% model(3) are more accurate since they have local volatility whereas for
-% model(1) the volatility is constant which is impled volatility in our case.
-% 
+% (although for 18 weeks model(1) is not very far).

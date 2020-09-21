@@ -2,7 +2,6 @@
 S0 = 53.09;
 T = [2, 6, 9, 14, 18]/52;
 K = (45:.5:70)';
-
 % Market prices of call options with strikes K and time to maturity T
 cmarket = [8.1335    8.1990    8.2665    8.3505    8.4525
     7.6395    7.6730    7.7935    7.8885    7.9990
@@ -55,16 +54,3 @@ cmarket = [8.1335    8.1990    8.2665    8.3505    8.4525
     0.0010    0.0085    0.0355    0.0515    0.0905
     0.0010    0.0085    0.0305    0.0480    0.0845
     0.0010    0.0080    0.0300    0.0465    0.0820];
-sigma=zeros(length(K),length(T));
-for i =1: length(T)
-    for j=i:length(K)
-        sigma(j,i)=blsimpv(S0,K(j),0,T(i),cmarket(j,i));
-    end
-end
-sigma;
-sigma_BS6=mean(sigma(:,2))
-delta1=zeros(length(K),1);
-for j=1:length(K)
-    delta1(j)=blsprice(S0,K(j),0,6/52,sigma_BS6)-cmarket(j,2);
-end
-delta1
