@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0068)file:///C:/Users/Dell/Documents/MATLAB/html/assignment3_nishant.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Assignment 3, Nishant Agrawal</title><meta name="generator" content="MATLAB 9.7"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2020-03-10"><meta name="DC.source" content="assignment3_nishant.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Assignment 3, Nishant Agrawal</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="file:///C:/Users/Dell/Documents/MATLAB/html/assignment3_nishant.html#1">Questions 1 and 2</a></li><li><a href="file:///C:/Users/Dell/Documents/MATLAB/html/assignment3_nishant.html#2">1(b)</a></li><li><a href="file:///C:/Users/Dell/Documents/MATLAB/html/assignment3_nishant.html#4">1(c)</a></li><li><a href="file:///C:/Users/Dell/Documents/MATLAB/html/assignment3_nishant.html#6">1(d)</a></li><li><a href="file:///C:/Users/Dell/Documents/MATLAB/html/assignment3_nishant.html#7">1(f)</a></li><li><a href="file:///C:/Users/Dell/Documents/MATLAB/html/assignment3_nishant.html#9">2(a)</a></li><li><a href="file:///C:/Users/Dell/Documents/MATLAB/html/assignment3_nishant.html#10">2(c)</a></li><li><a href="file:///C:/Users/Dell/Documents/MATLAB/html/assignment3_nishant.html#12">2(d)</a></li><li><a href="file:///C:/Users/Dell/Documents/MATLAB/html/assignment3_nishant.html#14">2(e)</a></li><li><a href="file:///C:/Users/Dell/Documents/MATLAB/html/assignment3_nishant.html#16">2(f)</a></li><li><a href="file:///C:/Users/Dell/Documents/MATLAB/html/assignment3_nishant.html#17">2(g)</a></li></ul></div><h2 id="1">Questions 1 and 2</h2><p><i><b>Please see the separate m-files where required in the zipped folder</b></i></p><h2 id="2">1(b)</h2><pre class="codeinput">rng(<span class="string">'default'</span>)
+T = 3.5/12;
+S0 = 9624;
+X0 = 29398;
+K1 = 10000;
+K2 = 30000;
+k=10000;
+sigma = blsimpv(9624,10000,0,3.5/12,197);
+alpha =blsimpv(29398,30000,0,3.5/12,633);
+PriceRainbow1(sigma, alpha,T,S0,X0,K1,K2,k)
+
+<span class="comment">%</span>
+</pre><pre class="codeoutput">pr =
+
+  760.4054
+
+
+CI =
+
+  738.3675
+  782.4434
+
+
+ans =
+
+  760.4054
+
+</pre><p><b>The function gives us the call option price of 760.4054 with 95% confidence interval of [738.367, 782.443]</b></p><h2 id="4">1(c)</h2><pre class="codeinput">rng(<span class="string">'default'</span>)
+T = 3.5/12;
+S0 = 9624;
+X0 = 29398;
+K1 = 10000;
+K2 = 30000;
+k=10000;
+rho=.7;
+sigma = blsimpv(9624,10000,0,3.5/12,197);
+alpha =blsimpv(29398,30000,0,3.5/12,633);
+PriceRainbow2(sigma, alpha,T,S0,X0,K1,K2,k,rho)
+ <span class="comment">%</span>
+</pre><pre class="codeoutput">price =
+
+  670.3501
+
+
+CI =
+
+  647.9369
+  692.7633
+
+
+ans =
+
+  670.3501
+
+</pre><p><b>The value of call option price is 670.3501 with 95% confidence interval as  [647.9369,  692.7633]</b></p><h2 id="6">1(d)</h2><p><b>The value in (1b) is higher than in 1c) since in 1c) there is a positive correlation. If stock with price 'ST' drops there is a good chance that value of 'XT' also drops and same for going up. Hence there is a good chance that if 'ST' gains then 'XT' also gains and hence the option is not exercised. On the contrary in 1b) they are independent. Also we can further add that if they are negatively correlated than the price of the option will go up</b></p><h2 id="7">1(f)</h2><pre class="codeinput">rng(<span class="string">'default'</span>)
+T = 3.5/12;
+S0 = 9624;
+X0 = 29398;
+K1 = 10000;
+K2 = 30000;
+k=10000;
+rho=.7;
+sigma = blsimpv(9624,10000,0,3.5/12,197);
+alpha =blsimpv(29398,30000,0,3.5/12,633);
+PriceRainbow3(sigma, alpha,T,S0,X0,K1,K2,k,rho)
+<span class="comment">%</span>
+</pre><pre class="codeoutput">price =
+
+  672.6032
+
+
+CI =
+
+  659.6409
+  685.5654
+
+
+ans =
+
+  672.6032
+
+</pre><div><ul><li><b>The value of call option price is 672.6032 with 95% confidence interval as  [659.6409, 685.5654]. If we see the confidence interval has shrunk by a factor of (692.7633-647.9369)/(685.5654-659.6409)= 1.7291. Since 1.729^2 = 2.984. The ratio of the length of the confidence interval is also a ratio of the standrd deviation of the samples from PriceRainbow2 and PriceRainbow3 since the confidence interval is given by (\mu  - z*sigma/sqrt(n),\mu  + z*sigma/sqrt(n)). Hence square of it will be the ratio of variance of the sample in  PriceRainbow2 and PriceRainbow3. That is Var(price from sample in PriceRainbow2)/Var(price from sample in PriceRainbow3) = 2.98</b>.</li><li><b>By the lemma stated in the notes of chapter 3, for monotonous function in antithetic sampling the covariance comes out to be neagative, the variance in the antithetic sample is always less than or equal to half of that in the standard sample. That is variance is will get reduced by a factor of atleast 2 if the condition of lemma is satisfied which also happens here. Since max(. , .)  is a monotonic function we can apply the above mentioned lemma.</b></li><li><b>From above we can see that ratio of the variances from two samples does exceed 2 and hence the variance decreases for the antithetic sampling by a factor of more than 2 (2.98 to be more precise).  Since the variance decreases we see that the confidence interval shrinks .</b></li></ul></div><h2 id="9">2(a)</h2><p>The value of the option for n=N will be max(K-Sn,0).</p><h2 id="10">2(c)</h2><p>we calculate for</p><pre class="codeinput">N=7;
+T=7/12;
+m=7;
+u=exp((.1191 - (.2389)^2/2)*(1/12)+.2389*(sqrt(1/12)));
+d=exp((.1191 - (.2389)^2/2)*(1/12)-.2389*(sqrt(1/12)));
+Sn=78.79;
+K=75;
+r=.01/12;
+AmericanPut(Sn ,u , d, r, K, m)
+<span class="comment">%</span>
+</pre><pre class="codeoutput">ans =
+
+    3.7557
+
+</pre><p><b>This gives the value of 3.7557.</b></p><h2 id="12">2(d)</h2><pre class="codeinput"><span class="comment">%</span>
+</pre><p><b>The price of American Put option will be higher compared to the European option. We pay more premium for American Put option since we can exercise the option anytime midway , sell the stock and earn interest upto the time till maturity. The selling in European Option can only be done at the time of maturity. The higher premium for American Put can also be attributed to the fact that it can be exercised early and at any time before the maturity which is advatntageous since price can fall below the strike price level (or even further) on any day before the maturity date</b></p><h2 id="14">2(e)</h2><pre class="codeinput">N=1500;
+T=7/12;
+m=1500;
+u=exp((.1191 - (.2389)^2/2)*(T/N)+.2389*(sqrt(T/N)));
+d=exp((.1191 - (.2389)^2/2)*(T/N)-.2389*(sqrt(T/N)));
+Sn=78.79;
+K=75;
+r=.01*T/N;
+AmericanPut2(Sn ,u , d, r, K, m)
+<span class="comment">%</span>
+</pre><pre class="codeoutput">ans =
+
+    3.7308
+
+</pre><p><b>This gives the value of 3.7308.</b></p><h2 id="16">2(f)</h2><p><b>It is desirable to have more than one points as we have started with discretising the interval [0,Tm] where Tm is time to maturity. Since American Put option can be executed at anytime before Tm hence smaller the size of the T/N better will be the approximation to the true value of the american Option.</b></p><h2 id="17">2(g)</h2><div><ul><li>The AmericanPut2 is more efficient than AmericanPut since while doing the recurssion there are many instances of the code waiting in the ram of the computer for the output from the recursion to be executed which does not happen for AmericanPut2 as in AmericanPut2 the values are straight away calculated and stored. In AmericanPut for m time step the function is called 2^(m+1) - 1 since first state (0 state) is called once 'the state t=1' is called twice, 'the state t=2' is called four times and so on. If we sum up these which is 1 + 2 + 2^2 + 2^3+....+2^m we get 2^(m+1) -1 calls for one calculation in AmericanPut. On the otherhand in AmericanPut2 the number of entries of the matrix is (m+1)*(m+2)/2 for (m+1*m+1) matrix. We can clearly see for large m; 2^(m+1) -1&gt;&gt; (m+1)(m+2)/2 and hence by this comparison AmericanPut2 is far more efficient than AmericanPut for large m*</li></ul></div><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB® R2019b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Assignment 3, Nishant Agrawal
+%% Questions 1 and 2
+% _*Please see the separate m-files where required in the zipped folder*_
+%% 1(b) 
+rng('default')
+T = 3.5/12;
+S0 = 9624;
+X0 = 29398;
+K1 = 10000;
+K2 = 30000;
+k=10000;
+sigma = blsimpv(9624,10000,0,3.5/12,197);
+alpha =blsimpv(29398,30000,0,3.5/12,633);
+PriceRainbow1(sigma, alpha,T,S0,X0,K1,K2,k)
+
+% 
+%%
+% *The function gives us the call option price of 760.4054 with 95% confidence interval of [738.367, 782.443]*
+
+%% 1(c) 
+rng('default')
+T = 3.5/12;
+S0 = 9624;
+X0 = 29398;
+K1 = 10000;
+K2 = 30000;
+k=10000;
+rho=.7;
+sigma = blsimpv(9624,10000,0,3.5/12,197);
+alpha =blsimpv(29398,30000,0,3.5/12,633);
+PriceRainbow2(sigma, alpha,T,S0,X0,K1,K2,k,rho)
+ % 
+ %%
+ % *The value of call option price is 670.3501 with 95% confidence interval as  [647.9369,  692.7633]*
+%% 1(d)
+% *The value in (1b) is higher than in 1c) since in 1c) there is a positive 
+% correlation. If stock with price 'ST' drops there is a good chance that 
+% value of 'XT' also drops and same for going up. Hence there is a good 
+% chance that if 'ST' gains then 'XT' also gains and hence the option 
+% is not exercised. On the contrary in 1b) they are independent. Also we 
+% can further add that if they are negatively correlated than the price
+% of the option will go up*
+
+%% 1(f) 
+rng('default')
+T = 3.5/12;
+S0 = 9624;
+X0 = 29398;
+K1 = 10000;
+K2 = 30000;
+k=10000;
+rho=.7;
+sigma = blsimpv(9624,10000,0,3.5/12,197);
+alpha =blsimpv(29398,30000,0,3.5/12,633);
+PriceRainbow3(sigma, alpha,T,S0,X0,K1,K2,k,rho)
+% 
+%%
+% 
+% *  *The value of call option price is 672.6032 with 95% confidence 
+% interval
+% as  [659.6409, 685.5654]. If we see the confidence interval has shrunk 
+% by a factor of (692.7633-647.9369)/(685.5654-659.6409)= 1.7291. Since
+% 1.729^2 = 2.984. The ratio of the length of the confidence interval is  
+% also a ratio of the standrd deviation of the samples from PriceRainbow2 
+% and PriceRainbow3 since the confidence interval is given by 
+% (\mu  - z*sigma/sqrt(n),\mu  + z*sigma/sqrt(n)). Hence square of it 
+% will be the ratio of variance of the sample in  PriceRainbow2 and 
+% PriceRainbow3. That is 
+% Var(price from sample in PriceRainbow2)/Var(price from sample in 
+% PriceRainbow3) = 2.98*. 
+% *  *By the lemma stated in the notes of chapter 3, for monotonous 
+% function in antithetic sampling the covariance comes out 
+% to be neagative, the variance in the antithetic sample is always less 
+% than or equal to half of that in the standard sample. That is variance is 
+% will get reduced by a factor of atleast 2 if the condition of lemma is 
+% satisfied which also happens here.
+% Since max(. , .)  is a monotonic function we can apply the 
+% above mentioned lemma.*
+% *  *From above we can see that ratio of the variances from two samples 
+% does exceed 2 and hence the variance
+% decreases for the antithetic sampling by a factor of more than 2 
+% (2.98 to be more precise).  Since the variance decreases we see that the 
+% confidence interval shrinks .*
+
+
+%% 2(a)
+% The value of the option for n=N will be max(K-Sn,0).
+
+%% 2(c) 
+% we calculate for 
+N=7;
+T=7/12;
+m=7;
+u=exp((.1191 - (.2389)^2/2)*(1/12)+.2389*(sqrt(1/12)));
+d=exp((.1191 - (.2389)^2/2)*(1/12)-.2389*(sqrt(1/12)));
+Sn=78.79;
+K=75;
+r=.01/12;
+AmericanPut(Sn ,u , d, r, K, m)
+% 
+%%
+% *This gives the value of 3.7557.*
+
+%% 2(d) 
+
+% 
+%%
+% *The price of American Put option will be higher compared to the European
+% option. We pay more premium for American Put option since we can exercise the 
+% option anytime midway , sell the stock and earn interest upto the 
+% time till maturity. The
+% selling in European Option can only be done at the time of maturity.
+% The higher premium for American Put can also be attributed to the fact
+% that it can be exercised early and at any time before the maturity which 
+% is advatntageous since price can fall below the strike price level 
+% (or even further) on any day before the maturity date* 
+
+%% 2(e) 
+N=1500;
+T=7/12;
+m=1500;
+u=exp((.1191 - (.2389)^2/2)*(T/N)+.2389*(sqrt(T/N)));
+d=exp((.1191 - (.2389)^2/2)*(T/N)-.2389*(sqrt(T/N)));
+Sn=78.79;
+K=75;
+r=.01*T/N;
+AmericanPut2(Sn ,u , d, r, K, m)
+% 
+%%
+% *This gives the value of 3.7308.*
+
+%% 2(f) 
+% *It is desirable to have more than one points as we have started with 
+% discretising the interval [0,Tm] where Tm is time to maturity. Since American Put 
+% option can be executed at anytime before Tm hence smaller the size of the 
+% T/N better will be the approximation to the true value of the american 
+% Option.*
+
+%% 2(g)
+% * The AmericanPut2 is more efficient than AmericanPut since while 
+% doing the recurssion there are many instances of the code waiting in the 
+% ram of the computer for the output from the recursion to be executed 
+% which does not 
+% happen for AmericanPut2 as in AmericanPut2 the values are straight away 
+% calculated and stored. In AmericanPut for m time step the function is  
+% called 2^(m+1) - 1 since first state (0 state) is called once 
+% 'the state t=1' is called twice, 'the state t=2' is called four times and 
+% so on. If we sum up these which is
+% 1 + 2 + 2^2 + 2^3+....+2^m we get 2^(m+1) -1 calls for one calculation in
+% AmericanPut.
+% On the otherhand in AmericanPut2 the number of entries 
+% of the matrix is (m+1)*(m+2)/2 for (m+1*m+1) matrix. We can clearly see
+% for large m; 2^(m+1) -1>> (m+1)(m+2)/2 and hence by this comparison 
+% AmericanPut2 is far more efficient
+% than AmericanPut for large m* 
+
+##### SOURCE END #####
+--></body></html>
