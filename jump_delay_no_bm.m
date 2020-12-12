@@ -1,3 +1,6 @@
+%%% This program helps in simulating path for models with jumps and no brownian motion. The underlying distribution for jumps is assymetric double exponential jump process.
+
+
 function path=jump_delay(p,q,eta,phi,Nsteps,lambda,Npaths,T,S0,delay_fac,alpha)
     
 n=zeros(Nsteps+1,Npaths);
