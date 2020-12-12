@@ -1,3 +1,5 @@
+%%% This program helps in simulating assymetric double exponential distribution.
+
 function sum= doubleexpo1(p,q,eta,phi,Nsamples)
 r=rand(1,Nsamples);
 Y=zeros(1,Nsamples);
